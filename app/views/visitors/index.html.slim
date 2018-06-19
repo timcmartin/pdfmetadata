@@ -1,0 +1,10 @@
+h3 Welcome
+= simple_form_for :chart, url: charts_path  do |f|
+  fieldset
+    = f.input :title, required: false
+    = f.input :path, required: true
+    = f.input :composer, required: false
+    = f.input :genre, required: false
+    = f.input :keywords, required: false
+    = f.input :format, required: false
+    = f.button :submit, class: "radius"

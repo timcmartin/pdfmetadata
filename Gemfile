@@ -55,6 +55,7 @@ gem 'prawn'
 gem 'prawn-templates'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'dotenv-rails'
 
 group :development do
   gem 'better_errors'
@@ -68,6 +69,7 @@ end
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
+  gem 'awesome_print'
   gem 'rubocop'
 end
 
