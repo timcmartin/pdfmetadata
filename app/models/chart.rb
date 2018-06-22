@@ -1,7 +1,8 @@
 # chart.rb
 class Chart
   require 'active_support/inflector'
-  require 'fileutils'
+  include Pathmaster
+
   attr_accessor(:title, :path, :composer, :genre, :keywords, :format)
 
   def initialize(attributes = {})
@@ -32,22 +33,9 @@ class Chart
 
   def process_pdf
     raise ArgumentError, "File does not exist" unless File.exist?(raw_file)
-    move_with_path(raw_file, backup_file)
-    copy_with_path(backup_file, processed_file)
+    backup_and_move(raw_file, backup_file, processed_file)
     pdf = Prawn::Document.new(template: processed_file, info: pdf_hash)
     pdf.render_file processed_file
     move_with_path(processed_file, raw_file)
   end
-
-  private
-
-    def copy_with_path(src, dst)
-      FileUtils.mkdir_p(File.dirname(dst))
-      FileUtils.cp(src, dst)
-    end
-
-    def move_with_path(src, dst)
-      FileUtils.mkdir_p(File.dirname(dst))
-      FileUtils.mv(src, dst)
-    end
 end
