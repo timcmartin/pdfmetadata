@@ -1,7 +1,8 @@
 require 'active_support/concern'
-# Pathmaster
+# Filemover
 # Used to move files
-module Pathmaster
+
+module Filemover
   require 'fileutils'
   extend ActiveSupport::Concern
 

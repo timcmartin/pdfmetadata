@@ -1,7 +1,7 @@
 # chart.rb
 class Chart
   require 'active_support/inflector'
-  include Pathmaster
+  include Filemover
 
   attr_accessor(:title, :path, :composer, :genre, :keywords, :format)
 
@@ -15,12 +15,12 @@ class Chart
     raise ArgumentError, "Must provide a valid path." if @path.nil?
   end
 
-  def backup_file
-    File.join(Rails.public_path, ENV["BACKUP"], @path)
-  end
-
   def pdf_hash
     { Title: @title, Author: @composer, Keywords: @keywords, Subject: @genre, Creator: @format }
+  end
+
+  def backup_file
+    File.join(Rails.public_path, ENV["BACKUP"], @path)
   end
 
   def processed_file
