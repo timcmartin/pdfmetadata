@@ -14,20 +14,11 @@ class ChartsController < ApplicationController
   end
 
   def directory
-    score_path = File.join(ENV["INPUT"], directory_params["path"])
-    score_values = YAML.load_file(File.join(score_path, "scores.yml"))
-    scores = score_values[:score]
-    scores.each do |score|
-      score[:path] = File.join(directory_params["path"], score[:filename])
-      chart = Chart.new(score)
-      chart.process_pdf if chart.valid?
-      if chart.valid? && chart.process_pdf
-        flash[:notice] = "#{chart.title} has been updated."
-      else
-        flash.now[:alert] = "#{chart.errors.full_messages}"
-      end
+    @batch = Batch.new(directory_params)
+    unless @batch.valid?
+      flash.now[:alert] = "#{@batch.errors.full_messages}"
+      render :action => 'batch'
     end
-    render action: 'batch'
   end
 
   private

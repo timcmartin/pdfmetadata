@@ -1,0 +1,27 @@
+h3 Batch Results
+
+- unless @batch.valid_charts.empty?
+
+  h4 Success
+
+  table
+    - @batch.valid_charts.each do |chart|
+      tr
+        td.name = chart.title
+- else
+  p
+   | No Valid Charts found.  Please correct yaml file.
+
+
+- unless @batch.invalid_charts.empty?
+
+  h4 Errors
+
+  table
+    - @batch.invalid_charts.each do |chart|
+      tr
+        td.name = chart.title
+        td.name = chart.errors.full_messages
+- else
+  p
+   | No Invalid Charts found.  Yay!

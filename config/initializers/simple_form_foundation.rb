@@ -26,7 +26,7 @@ SimpleForm.setup do |config|
     b.use :label_input
     b.use :error, wrap_with: { tag: :small, class: :error }
 
-    # b.use :hint,  wrap_with: { tag: :span, class: :hint }
+    b.use :hint,  wrap_with: { tag: :span, class: :hint }
   end
 
   config.wrappers :horizontal_form, tag: 'div', class: 'row', hint_class: :field_with_hint, error_class: :error, valid_class: :valid do |b|
@@ -45,7 +45,7 @@ SimpleForm.setup do |config|
     b.wrapper :right_input_wrapper, tag: :div, class: 'small-9 columns' do |ba|
       ba.use :input
       ba.use :error, wrap_with: { tag: :small, class: :error }
-      # ba.use :hint,  wrap_with: { tag: :span, class: :hint }
+      ba.use :hint,  wrap_with: { tag: :span, class: :hint }
     end
   end
 
@@ -60,7 +60,7 @@ SimpleForm.setup do |config|
       end
 
       ba.use :error, wrap_with: { tag: :small, class: :error }
-      # ba.use :hint,  wrap_with: { tag: :span, class: :hint }
+      ba.use :hint,  wrap_with: { tag: :span, class: :hint }
     end
   end
 
@@ -84,7 +84,7 @@ SimpleForm.setup do |config|
     b.use :input
 
     b.use :error, wrap_with: { tag: :small, class: :error }
-    # b.use :hint,  wrap_with: { tag: :span, class: :hint }
+    b.use :hint,  wrap_with: { tag: :span, class: :hint }
   end
 
   # Examples of use:
@@ -99,7 +99,7 @@ SimpleForm.setup do |config|
     end
 
     b.use :error, wrap_with: { tag: :small, class: :error }
-    # b.use :hint,  wrap_with: { tag: :span, class: :hint }
+    b.use :hint,  wrap_with: { tag: :span, class: :hint }
   end
 
   # CSS class for buttons
