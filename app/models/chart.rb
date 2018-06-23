@@ -3,7 +3,7 @@ class Chart
   include Filemover
   include ActiveModel::Model
 
-  attr_accessor(:title, :path, :composer, :genre, :keywords, :format)
+  attr_accessor(:title, :path, :composer, :genre, :keywords, :format, :filename)
 
   validates_with ChartValidator
 

@@ -1,0 +1,5 @@
+h3 Add Batch Metadata To A Directory of Charts
+= simple_form_for :chart, url: directory_path  do |f|
+  fieldset
+    = f.input :path, required: true
+    = f.button :submit, class: "radius"
