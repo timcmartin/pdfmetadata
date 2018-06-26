@@ -1,5 +1,6 @@
 # batch_file.rb
 class BatchFile
+  include Filemover
   include ActiveModel::Model
 
   validates_with BatchFileValidator
@@ -40,6 +41,11 @@ class BatchFile
 
   def process_files
     return if scores.empty?
+    backup_existing
     File.open(batch_data, 'w') { |file| file.write scores.to_yaml }
+  end
+
+  def backup_existing
+    copy_with_path(batch_data, batch_data.concat(".bak")) if File.exist?(batch_data)
   end
 end
