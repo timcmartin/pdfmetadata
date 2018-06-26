@@ -1,0 +1,14 @@
+h3 Batch File Results
+
+- if @batch_file.valid?
+
+  h4 Success
+
+  p
+   | Please edit the generated YAML file to include the correct information.
+
+- else
+
+  h4 There are errors
+
+  p = @batch_file.errors.full_messages.to_sentence

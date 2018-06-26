@@ -27,12 +27,29 @@
 | keymi:N      | Key (major/minor)  | 0:major, 1:minor       |
 
 ```yaml
-:score:
-  -
-    :filename: "Ain't No Sunshine.pdf"
-    :title: "Ain't No Sunshine"
-    :composer: Bill Withers
-    :keywords: Acoustic, keysf:0, keymi:1, rating:0
-    :genre: Classic Soul
-    :format: Sibelius
+---
+- :filename: Ain't No Sunshine.pdf
+  :title: Ain't No Sunshine
+  :composer: Bill Withers
+  :keywords: Acoustic, keysf:0, keymi:1, rating:0
+  :genre: Classic Soul
+  :format: Sibelius
+- :filename: "Aint Too Proud To Beg.pdf"
+  :title: "Ain't Too Proud To Beg"
+  :composer: The Temptations, The Rolling Stones
+  :keywords: "Spare, keysf:2, keymi:0, rating:3"
+  :genre: Classic Soul, Classic Rock
+  :format: Sibelius
+- :filename: "Alive.pdf"
+  :title: Alive
+  :composer: Pearl Jam
+  :keywords: "Spare, keysf:0, keymi:0, rating:3"
+  :genre: Modern Rock
+  :format: Sibelius
+- :filename: "Whipping Post.pdf"
+  :title: Whipping Post
+  :composer: Allman Brothers Band
+  :keywords: "Current, keysf:0, keymi:1, rating:5"
+  :genre: Classic Rock
+  :format: Sibelius
 ```

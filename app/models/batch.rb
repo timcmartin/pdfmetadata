@@ -19,8 +19,7 @@ class Batch
 
   def scores
     return [] unless self.valid?
-    score_values = YAML.load_file(batch_data)
-    score_values[:score]
+    YAML.load_file(batch_data)
   end
 
   def process_files

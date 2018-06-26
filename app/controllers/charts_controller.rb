@@ -5,7 +5,7 @@ class ChartsController < ApplicationController
       flash[:notice] = "#{@chart.title} has been updated."
       redirect_to '/'
     else
-      flash.now[:alert] = "#{@chart.errors.full_messages}"
+      flash.now[:alert] = "#{@chart.errors.full_messages.to_sentence}"
       render :action => 'index'
     end
   end

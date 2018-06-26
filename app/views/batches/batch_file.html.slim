@@ -1,0 +1,5 @@
+h3 Create a Batch YAML File
+= simple_form_for :batch, url: batch_file_gen_path  do |f|
+  fieldset
+    = f.input :path, required: true
+    = f.button :submit, "Create YAML File", class: "radius"
