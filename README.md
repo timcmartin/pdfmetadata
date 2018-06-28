@@ -1,20 +1,10 @@
 Pdfchart
 ================
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+A utility to add Metadata to PDF files, primarily for importing into the forScore iOS app.
+Title, Composer, Genres, Tags, Rating, Difficulty, Duration and Key can be set in the PDF Metadata so that is unified for everyone who imports that PDF into forScore.
 
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
-
-Problems? Issues?
------------
-
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
+My personal workflow is to create lead sheets in Sibelius, export the PDF then run it through this utility to add the missing data before importing to forScore.
 
 Ruby on Rails
 -------------

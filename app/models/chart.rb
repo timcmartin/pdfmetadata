@@ -28,6 +28,7 @@ class Chart
   end
 
   def process_pdf
+    return unless self.valid?
     backup_and_move(raw_file, backup_file, processed_file)
     pdf = Prawn::Document.new(template: processed_file, info: pdf_hash)
     pdf.render_file processed_file
