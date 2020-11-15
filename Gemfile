@@ -71,5 +71,7 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'awesome_print'
   gem 'rubocop'
+  gem 'pry'
+  gem 'binding_of_caller'
 end
 
