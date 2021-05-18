@@ -145,7 +145,8 @@ GEM
     pry-rescue (1.4.5)
       interception (>= 0.5)
       pry
-    puma (3.12.6)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -264,7 +265,7 @@ DEPENDENCIES
   pry
   pry-rails
   pry-rescue
-  puma (~> 3.12)
+  puma (~> 4.3)
   rails (~> 5.1.6)
   rails_apps_pages
   rails_layout
